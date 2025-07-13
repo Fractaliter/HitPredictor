@@ -1,0 +1,18 @@
+# backend/Dockerfile
+
+FROM python:3.10-slim
+
+# Ustawiamy katalog roboczy
+WORKDIR /app
+
+# Kopiujemy pliki wymagane do instalacji
+COPY requirements.txt .
+
+# Instalujemy zależności
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Kopiujemy resztę aplikacji
+COPY . .
+
+# Domyślna komenda (możesz ją nadpisać w docker-compose)
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "80"]

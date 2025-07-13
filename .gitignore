@@ -1,0 +1,34 @@
+# Node (frontend)
+node_modules/
+dist/
+.env
+.env.production
+.vite/
+
+# Python (backend)
+__pycache__/
+*.py[cod]
+*.pkl
+*.sqlite3
+.venv/
+env/
+venv/
+
+# VSCode & systemowe
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+*.pid
+docker-compose.override.yml
+
+# Build cache
+*.tar
+*.bak
+*.swp
+
+# OS-specific
+*.~lock.*  # LibreOffice
+.idea/     # JetBrains
